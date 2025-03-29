@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Aluno: thiago Reinecke - ADS II -  29/03/2025-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+
+    <style>
+        body{
+            background-color: rgb(201, 199, 199);
+        }
+        #fundo{
+            width: 750px;
+            height: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            margin: auto;
+            padding: 15px;
+            
+        }
+        #cabecalho{
+            display: flex;
+            padding: 15px;
+        }
+        .id_cabecalho{
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        .bandeira{
+            display: flex;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+            height: 400px;
+            overflow: hidden;
+        }
+        #Japao{
+            justify-content: center;
+            align-items: center;
+        }
+        #circulo_japao{
+            background-color: rgb(180, 17, 17);
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+        #Alemanha, #Holanda{
+            flex-direction: column;
+        }
+        .alem_color, .hol_color{
+            height: 33.33%;
+            width: 100%;
+        }
+        .italia_color{
+            height: 100%;
+            width: 33.34%;
+        }
+
+        .alem_color:nth-child(1){
+            background-color: black;
+        }
+        .alem_color:nth-child(2){
+            background-color: rgb(180, 17, 17);
+        }
+        .alem_color:nth-child(3){
+            background-color: rgb(235, 235, 19);
+        }
+        .hol_color:nth-child(1){
+            background-color: rgb(180, 17, 17);
+        }
+        .hol_color:nth-child(3){
+            background-color: rgb(47, 23, 182);
+        }
+        .italia_color:nth-child(1){
+            background-color: rgb(19, 100, 19);
+        }
+        .italia_color:nth-child(3){
+            background-color: rgb(180, 17, 17);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div id="fundo">
+        <hr>
+        <div id="cabecalho">
+            <div class="id_cabecalho"><a href="#Jap">Bandeira Japão</a></div>
+            <div class="id_cabecalho"><a href="#Alem">Bandeira Alemanha</a></div>
+            <div class="id_cabecalho"><a href="#Hol">Bandeira Holanda</a></div>
+            <div class="id_cabecalho"><a href="#Ita">Bandeira Itália</a></div>
+        </div>
+        <hr>
+
+        <h1 id="Jap">Bandeira do Japão</h1>
+        <div class="bandeira" id="Japao">
+            <div id="circulo_japao"></div>
+        </div>
+
+        <h1 id="Alem">Bandeira da Alemanha</h1>
+        <div class="bandeira" id="Alemanha">
+            <div class="alem_color"></div>
+            <div class="alem_color"></div>
+            <div class="alem_color"></div>
+
+        </div>
+
+        <h1 id="Hol">Bandeira da Holanda</h1>
+        <div class="bandeira" id="Holanda">
+            <div class="hol_color"></div>
+            <div class="hol_color"></div>
+            <div class="hol_color"></div>
+
+        </div>
+
+        <h1 id="Ita">Bandeira da Itália</h1>
+        <div class="bandeira" id="Italia">
+            <div class="italia_color"></div>
+            <div class="italia_color"></div>
+            <div class="italia_color"></div>
+
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>

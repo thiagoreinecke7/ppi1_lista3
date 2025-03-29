@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Aluno: Thiago Reinecke - ADS II - 28/03/2025-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+
+    <style>
+        .fundo{
+            border: 1px solid rgb(226, 225, 225);
+            background-color: rgb(247, 247, 247) ;
+            border-radius: 7px;
+            height: 500px;
+            width: 400px;
+            position: fixed;
+            right: 2px;
+            bottom: 2px;
+        }
+        #barra_roll{
+            height: 500px;
+            width: 8px;
+            background-color: rgb(218, 217, 217);
+            border-radius: 7px;
+            position: fixed;
+            right: 3px;
+        }
+        #Caixa_chat{
+            height: 480px;
+            width: 370px;
+            margin: 10px 25px 10px 10px;
+        }
+        #texto{
+            position: relative;
+            border: 1px solid rgb(226, 225, 225);
+            border-radius: 5px;
+            height: 110px; 
+            padding: 5px;
+            bottom: -5px;
+        }
+        #mensagem{
+            border-radius: 5px;
+            width: 98%;
+            height: 80px;
+        }
+        #botao{
+            position: absolute;
+            border-radius: 5px;
+            cursor: pointer;
+            right: 5px;
+            bottom: 5px;
+        }
+        .chat{
+            position: relative;
+            height: 71px;
+            border: 1px solid rgb(226, 225, 225);
+            border-radius: 7px;
+            background-color: white;
+        }
+        .nome{
+            font-size: smaller;
+            color: rgb(182, 181, 181);
+        }
+        .hora_pedro{
+            position: absolute;
+            bottom: 7px;
+            right: 7px;
+            font-size: small;
+            color: rgb(182, 181, 181);
+        }
+        .hora_eu{
+            position: absolute;
+            bottom: 7px;
+            left: 7px;
+            font-size: small;
+            color: rgb(182, 181, 181);
+        }
+        .pedro{
+            height: 70px;
+            width: 70px;
+        }
+        .eu{
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            right: 0;
+        }
+        .msg{
+            position: absolute;
+            width: 285px;
+            height: 70px;
+            top: 0;
+            padding: 5px;
+        }
+        .msg_pedro{
+            position: absolute;
+            width: 285px;
+            height: 70px;
+            top: 0;
+            right: 0;
+            padding: 5px;
+        }
+        .fundo_eu{
+            background-color: rgb(183, 233, 216);
+        }
+        .chat:has(.eu){
+            background-color: rgb(186, 243, 224);
+        }
+        img{
+            border-radius: 50%;
+        }  
+    </style>
+
+</head>
+<body>
+    <div class="fundo">
+        <div id="barra_roll"></div>
+        <div id="Caixa_chat">
+            <div class="nome">Pedro Silva</div>
+            <div class="chat">
+                <div class="pedro"><img src="imagens/Masculino.png" alt="masc"></div>
+                <div class="msg_pedro">Olá, tudo bem?</div>
+                <div class="hora_pedro">00:50</div>
+            </div>
+            <div class="nome">Eu</div>
+            <div class="chat">
+                <div class="eu"><img src="imagens/Feminino.png" alt="fem"></div>
+                <div class="msg">Estou bem sim, e você?</div>
+                <div class="hora_eu">00:55</div>
+            </div>
+            <div class="nome">Pedro Silva</div>
+            <div class="chat">
+                <div class="pedro"><img src="imagens/Masculino.png" alt="masc"></div>
+                <div class="msg_pedro">Vamos sair hoje? sabe conversar e Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut tempora.</div>
+                <div class="hora_pedro">01:01</div>
+            </div>
+            <div class="nome">Eu</div>
+            <div class="chat">
+                <div class="eu"><img src="imagens/Feminino.png" alt="fem"></div>
+                <div class="msg">Criatura .....</div>
+                <div class="hora_eu">00:55</div>
+            </div>
+            <div id="texto">
+                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem" style="border: 1px solid rgb(226, 225, 225);"></textarea>
+                <div id="botao">
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #fundo, .box{
+            border: 1px solid black;
+        }
+        #fundo{
+            height: 99vh;
+            padding: 5px;
+            display: grid;
+            grid-template-areas:
+            "header header header"
+            "l_side banner r_side"
+            "l_side main r_side"
+            "l_side low r_side"
+            "footer footer footer"
+            ;
+            grid-template-columns: 1fr 5fr 1fr;
+            grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
+        }
+        .box{
+            text-align: center;
+            align-content: center;
+            margin: 5px;
+            line-height: 100%;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #box1, #box4{
+            background-color: orange;
+        }
+        #box3, #box6{
+            background-color: green;
+        }
+        #box5, #box7{
+            background-color: blue;
+        }
+        #box1{
+            grid-area: header;
+        }
+        #box2{
+            grid-area: banner;
+            background-color: brown;
+        }
+        #box3{
+            grid-area: l_side;
+        }
+        #box4{
+            grid-area: r_side;
+        }
+        #box5{
+            grid-area: main;
+        }
+        #box6{
+            grid-area: low;
+        }
+        #box7{
+            grid-area: footer;
+        }
+        @media (max-width: 500px) {
+            #fundo{
+                height: 99vh;
+                width: 100vw;
+                padding: 5px;
+                display: grid;
+                grid-template-areas:
+                "header"
+                "banner"
+                "l_side"
+                "main"
+                "r_side"
+                "low"
+                "footer"
+                ;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 5fr 1fr 1fr 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="fundo">
+        <div class="box" id="box1">Header</div>
+        <div class="box" id="box2">Banner</div>
+        <div class="box" id="box3">Left Aside</div>
+        <div class="box" id="box4">Right Aside</div>
+        <div class="box" id="box5">Main Content</div>
+        <div class="box" id="box6">Low Content</div>
+        <div class="box" id="box7">Footer</div>
+    </div>
+
+
+
+</body>
+</html>

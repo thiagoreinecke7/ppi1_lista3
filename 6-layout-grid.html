@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+
+    <style>
+        #fundo{
+            display: grid;
+            width: 700px;
+            height: 600px;
+            margin: auto;
+            grid-template-areas:
+            "header header header"
+            "coluna_esq2 main coluna_dir4"
+            "coluna_esq5 main coluna_dir6"
+            "coluna_esq5 coluna_dir7 coluna_dir7"
+            ;
+            
+        }
+        .box{
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            align-content: center;
+            line-height: 100%;
+            margin: 3px;
+        }
+        .box:nth-child(odd){
+            background-color: bisque;
+        }
+        .box:nth-child(even){
+            background-color: palevioletred;
+        }
+        #box1{
+            grid-area: header;
+        }
+        #box2{
+            grid-area: coluna_esq2;
+        }
+        #box3{
+            grid-area: main;
+        }
+        #box4{
+            grid-area: coluna_dir4;
+        }
+        #box5{
+            grid-area: coluna_esq5;
+        }
+        #box6{
+            grid-area: coluna_dir6;
+        }
+        #box7{
+            grid-area: coluna_dir7;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="fundo">
+        <div class="box" id="box1"><b>1</b></div>
+        <div class="box" id="box2"><b>2</b></div>
+        <div class="box" id="box3"><b>3</b></div>
+        <div class="box" id="box4"><b>4</b></div>
+        <div class="box" id="box5"><b>5</b></div>
+        <div class="box" id="box6"><b>6</b></div>
+        <div class="box" id="box7"><b>7</b></div>
+
+    </div>
+
+    
+</body>
+</html>

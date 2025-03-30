@@ -9,18 +9,34 @@
         body{
             padding: 0;
             margin: 0;
+            overflow: hidden;
         }
         #ceu{
+            position: absolute;
+            z-index: 1;
             height: 100vh;
             width: 100vw;
             background: linear-gradient(to bottom, rgb(90, 205, 250), orange);
         }
+        #sol{
+            position: absolute;
+            z-index: 2;
+            top: 64vh;
+            left: 45%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, orange, rgb(248, 219, 164));
+            filter: blur(5px);
+            box-shadow: 0px 155px 10px 0 rgba(248, 220, 167, 0.5);
+        }
         #mar{
             position: absolute;
-            bottom: 0;
-            height: 300px;
+            top: 80vh;
+            height: 200px;
             width: 100%;
             background: radial-gradient(circle, rgb(98, 157, 180), rgb(1, 77, 107));
+            animation: movimento_mar 2s ease-in-out infinite;
         }
         .nuvem{
             position: absolute;
@@ -29,30 +45,95 @@
             
         }
         #nuvem1{
-            top: 100px;
+            top: 20px;
             left: 170px;
             width: 150px;
             height: 150px;
             box-shadow: -80px 0 5px 0 #fff, -40px 40px 5px 0 #fff, 40px 40px 5px 0 #fff;
             filter: blur(5px);
+            animation: movimento_nuvem1 35s linear infinite;
         }
         #nuvem2{
-            top: 200px;
+            top: 50px;
             right: 150px;
             width: 200px;
             height: 170px;
             box-shadow: 80px 80px 5px 0 #fff, 40px -10px 5px 0 #fff, -40px 60px 5px 0 #fff;
             filter: blur(5px);
+            animation: movimento_nuvem2 20s linear infinite;
         }
+        #barco{
+            position: absolute;
+            z-index: 3;
+            height: 200px;
+            width: 200px;
+            animation: balanco 2s ease infinite, movimento_nuvem1 30s linear infinite;
+        }
+
+        @keyframes balanco {
+            0%, 100%{
+                bottom: 95px;
+                transform: rotate(0deg);
+            }
+            50%{
+                bottom: 100px;
+                transform: rotate(2deg);
+            }
+        }
+        @keyframes movimento_nuvem1 {
+            0% { 
+                left: -200px;
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            95%{
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                left: 100vw; 
+            }
+        }
+        @keyframes movimento_nuvem2 {
+            0% { 
+                left: -200px;
+                opacity: 0;
+            }
+            5% {
+                opacity: 1;
+            }
+            95%{
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                left: 100vw; 
+            }
+        }
+        @keyframes movimento_mar {
+            0%, 100%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(0.3deg);
+            }
+            
+        }
+
 
     </style>
 
 </head>
 <body>
     <div id="ceu">
+        <div id="sol"></div>
         <div id="mar"></div>
         <div class="nuvem" id="nuvem1"></div>
         <div class="nuvem" id="nuvem2"></div>
+        <div><img id="barco" src="imagens/barquinho.png" alt="barquinho"></div>
+        
 
 
     </div>
